@@ -7,9 +7,11 @@ import java.net.MalformedURLException;
 
 public class Setup {
 
+    WebDriver browser;
+
     @Before
     public void beforeScenario() throws MalformedURLException {
-        final WebDriver browser = BrowserFactory.getWebDriver();
-        browser.manage().window().maximize();
+        browser = BrowserFactory.getWebDriver();
+
     }
 }

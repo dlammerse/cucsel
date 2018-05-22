@@ -1,21 +1,22 @@
 # Assignments
 
-All the files which you will need to edit in these assignments are located in **src/test/java/com/capgemini**.
-> It might be a good idea to open the local html file that is used in the first assignments in a chrome browser (**main/resources/index.html**).
+Your starting point will be the feature files. These are placed in **src/test/features**.
+> It might be a good idea to open the local html file that is used in the first assignments in a chrome browser (**main/resources/index.html**) > right click > Open in Browser.
 
-_NOTE: You will learn the most from finding things out yourself. If you are stuck and don't know the answer, try to google it. Try to use words like cucumber, selenium or java to find your answer. Next exersises will be less descriptive. Remember it is not about finishing the exercises first it's about learning as much as possible._
+_NOTE: You will learn the most from finding things out yourself. If you are stuck and don't know the answer, try to google it. Try to use words like cucumber, selenium or java to find your answer.  Remember it is not about finishing the exercises first, it's about learning as much as possible._
 
 ## Exercise 1
 
  1. In **loan.feature**, Right-click on the scenario name 'request a car loan' and choose 'Run Scenario...'
- 2. As you can see the webpage gives an error message because the desired amount to borrow is lower than the minimum. Update the step "**And** the amount I want to borrow is '1000'" so that this error message is no longer given.
-     > The steps are located in **steps/CGLoansSteps**
- 3. Create the step "**And** I continue to explanation" (just remove the #). The background color of the step will turn into brown box, this means that there is no java connected to this step. Use Alt + Enter, choose 'Create step definition', choose loan_steps (com.project.steps).
+ 2. As you can see the webpage gives an error message because the desired amount to borrow is lower than the minimum. Update the step "**And** the amount I want to borrow is '1000'" so that this error message is no longer given. You also need to change the code (Ctrl + left-mouse to acces the code).
+     > All code is located in **src/test/java/com/capgemini**. The steps are located in subfolder **steps**
+ 3. Create the step "**And** I continue to explanation" (just remove the # in the feature file). The background color of the step will turn into brown box, this means that there is no java connected to this step. Use Alt + Enter, choose 'Create step definition', choose loan_steps (com.project.steps).
  4. Check the generated java code, remove the auto generated `throw new PendingException();`. This exception is generated to make sure that you understand java code a bit before you can run a successful execution.
  5. Use Chrome to open **index.html** and right-click the "Continue to explanation" button and select "Inspect" to identify the selector for this button.
- 6. In IntelliJ use copy paste from the `iSelectLoanTypeCarLoan()` method, change the CSS selector to selector you found in Chrome.
- 7. Is `.click()` the right method to use here?
- 8. Run the scenario
+ 6. If you found the right selector, open ChroPath and check if the selector indeed works.
+ 7. In IntelliJ use copy paste from the `iSelectLoanTypeCarLoan()` method, change the CSS selector to selector you found in Chrome.
+ 8. Is `.click()` the right method to use here?
+ 9. Run the scenario
 
 ## Exercise 2
 
@@ -43,6 +44,7 @@ _NOTE: You will learn the most from finding things out yourself. If you are stuc
 
 ## Exercise 6
 
-1. Use faker to generate random data?
-2. Reduce your gherkin to Given When Then (so 3 lines, max 4/5 lines)?
-3. Add pages layer?
+1. Use faker to generate random data.
+2. Create page objects. One java file per page.
+
+>Now it is time to test some real web pages. Continue to AssignmentsNS.md

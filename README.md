@@ -4,16 +4,16 @@ cucumber-java-selenium
 ## Download & Install:
 
 - Java IDE: [IntelliJ community edition](https://www.jetbrains.com/idea/download/#section=windows)
-- Chrome Plugin: [CSS Selector Helper for Chrome](https://chrome.google.com/webstore/detail/css-selector-helper-for-c/gddgceinofapfodcekopkjjelkbjodin)
+- ChroPath Plugin: [CSS selecor checker for Chrome](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo)
 - [Git](https://git-scm.com)
-- [Java jdk](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (niet de JRE)
+- [Java jdk](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (don't download the JRE)
 
 
 ## Setup
 
 - Start up IntelliJ
 - Choose 'Check out from Version Control' -> Git
-- Fill in URL "https://github.com/jgelon/TestForce.git"
+- Fill in URL "https://github.com/dlammerse/TestForce.git"
 - Press Clone
 - When the following pop-up comes up select 'No': 
 

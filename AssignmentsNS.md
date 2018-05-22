@@ -2,19 +2,20 @@ Assignments
 ==================
 
 ##### Exercise 1
-a) Create step 'And I travel to Utrecht' (just remove the #). The background color of
+a) Open travels.feature and check that the scenario runs (Right click on '**Scenario:** travel from Amsterdam to Utrecht' and choose 'Run')<br/>
+b) Create step 'And I travel to Utrecht' (just remove the #). The background color of
 the step will turn into brown box, this means that there is no java
 connected to this step. Use Alt + Enter, choose 'Create step definition',
 choose NS (com.capgemini.steps).<br/>
-b) Check the generated java code, remove the auto generated `throw new PendingException();`.
+c) Check the generated java code, remove the auto generated `throw new PendingException();`.
 This exception is generated to make sure that you understand java code a bit
 before you can run a successful execution.<br/>
-c) Use Chrome to navigate to `https://www.ns.nl/producten/s/enkele-reis`
+d) Use Chrome to navigate to `https://www.ns.nl/producten/s/enkele-reis`
 and open the Developer tools using F12 to identify the the selector for the 'To' field on the NS website.<br/>
-d) In IntelliJ use copy paste from the `iTravelFromAmsterdam()` method, change
-the CSS selector to selector you found in firepath.<br/>
-e) Is the `.sendKeys()` the right method to use here?<br/>
-f) Right-click on scenario naam 'travel from Amsterdam to Utrecht' and choose 'Run Scenario:..'
+e) In IntelliJ use copy paste from the `iTravelFromAmsterdam()` method, change
+the CSS selector to selector you found in ChroPath.<br/>
+f) Is the `.sendKeys()` the right method to use here?<br/>
+g) Right-click on scenario name 'travel from Amsterdam to Utrecht' and choose 'Run Scenario:..'
 
 
 <br/><br/>

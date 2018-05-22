@@ -1,17 +1,18 @@
 package com.capgemini.ourWebdriver;
 
+import com.capgemini.ourWebdriver.BrowserFactory;
 import cucumber.api.java.After;
 import org.openqa.selenium.WebDriver;
-
 import java.net.MalformedURLException;
 
 public class TearDown {
 
-    private final WebDriver browser;
+    WebDriver browser;
 
     public TearDown() throws MalformedURLException {
-        browser = BrowserFactory.getWebDriver();
+        this.browser = BrowserFactory.getWebDriver();
     }
+
 
     @After
     public void afterScenario() {

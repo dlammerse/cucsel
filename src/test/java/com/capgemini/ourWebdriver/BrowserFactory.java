@@ -1,6 +1,9 @@
 package com.capgemini.ourWebdriver;
 
+import cucumber.api.java.After;
+
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -8,7 +11,8 @@ import java.util.Properties;
 
 public class BrowserFactory {
 
-    private static OurWebDriver browser;
+    static OurWebDriver browser;
+
 
     public static OurFirefoxDriver createFfDriver() throws MalformedURLException {
         return OurFirefoxDriver.getBrowser();
@@ -23,14 +27,15 @@ public class BrowserFactory {
     }
 
     public static OurWebDriver getWebDriver() throws MalformedURLException {
-        final String browserType = getBrowserType();
+        String browserType = getBrowserType();
         return getBrowserOfType(browserType);
     }
 
-    private static OurWebDriver getBrowserOfType(final String browserType) {
-        if (browserType == null) {
+    private static OurWebDriver getBrowserOfType(String browserType) {
+        if(browserType==null){
             browser = OurFirefoxDriver.getBrowser();
-        } else if (browserType.equals("chrome")) {
+        }
+        else if (browserType.equals("chrome")) {
             browser = OurChromeDriver.getBrowser();
         } else if (browserType.equals("ie")) {
             browser = OurIEDriver.getBrowser();
@@ -42,16 +47,16 @@ public class BrowserFactory {
     }
 
     private static String getBrowserType() {
-        final Properties prop = new Properties();
-        final InputStream input;
+        Properties prop = new Properties();
+        InputStream input;
         String browserType = null;
 
         try {
 
-            input = new FileInputStream(System.getProperty("user.dir") + "\\browser.properties");
+            input = new FileInputStream(System.getProperty("user.dir") +"\\browser.properties");
             prop.load(input);
             browserType = prop.getProperty("browser.type");
-        } catch (final IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return browserType;
