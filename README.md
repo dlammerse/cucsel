@@ -13,7 +13,7 @@ cucumber-java-selenium
 
 - Start up IntelliJ
 - Choose 'Check out from Version Control' -> Git
-- Fill in URL "https://github.com/dlammerse/TestForce.git"
+- Fill in URL "https://github.com/dlammerse/cucsel.git"
 - Press Clone
 - When the following pop-up comes up select 'No': 
 
