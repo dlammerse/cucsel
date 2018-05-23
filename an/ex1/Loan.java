@@ -1,6 +1,7 @@
 package com.capgemini.steps;
 
 import com.capgemini.ourWebdriver.BrowserFactory;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
@@ -8,10 +9,10 @@ import org.openqa.selenium.WebDriver;
 
 import java.net.MalformedURLException;
 
-public class CGLoansSteps {
+public class Loan {
     private final WebDriver browser;
 
-    public CGLoansSteps() throws MalformedURLException {
+    public Loan() throws MalformedURLException {
         browser = BrowserFactory.getWebDriver();
     }
 
@@ -28,9 +29,14 @@ public class CGLoansSteps {
         Thread.sleep(1000);
     }
 
-    @And("^the amount I want to borrow is '1000'$")
+    @And("^the amount I want to borrow is '2000'$")
     public void theAmountIWantToBorrowIs() throws Throwable {
-        browser.findElement(By.cssSelector("input[name='amount']")).sendKeys("1000");
+        browser.findElement(By.cssSelector("input[name='amount']")).sendKeys("2000");
         Thread.sleep(5000);
+    }
+
+    @And("^I continue to explanation$")
+    public void iContinueToExplanation() throws Throwable {
+        browser.findElement(By.cssSelector("#verderPage1")).click();
     }
 }
